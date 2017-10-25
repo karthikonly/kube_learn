@@ -4,6 +4,11 @@ class SiteController < ApplicationController
     # page_count.count += 1
     # page_count.save!
     # @count = page_count.count
-    @count = rand.to_s[2..3]
+
+    @random_count = rand.to_s[2..3]
+
+    @redis_count = $redis.get('redis_count').to_i
+    @redis_count += 1
+    $redis.set('redis_count', @redis_count)
   end
 end
