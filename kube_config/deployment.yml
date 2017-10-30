@@ -1,7 +1,7 @@
 apiVersion: apps/v1beta1
 kind: Deployment
 metadata:
-  name: vanilla-rails-deployment
+  name: rails-deployment
   labels:
     app: vanilla-rails-app
 spec:
@@ -15,7 +15,7 @@ spec:
         app: vanilla-rails-app
     spec:
       containers:
-      - name: vanilla-rails-app
-        image: vanilla:latest
+      - name: rails-container
+        image: karthikonly/vanilla-rails:latest
         ports:
         - containerPort: 3000
