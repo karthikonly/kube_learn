@@ -13,6 +13,9 @@
 
 ActiveRecord::Schema.define(version: 20171025150358) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "page_counts", force: :cascade do |t|
     t.integer  "count",      default: 0
     t.datetime "created_at",             null: false
