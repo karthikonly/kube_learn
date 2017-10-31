@@ -4,15 +4,18 @@ metadata:
   name: rails-deployment
   labels:
     app: vanilla-rails-app
+    tier: app
 spec:
   replicas: 3
   selector:
     matchLabels:
       app: vanilla-rails-app
+      tier: app
   template:
     metadata:
       labels:
         app: vanilla-rails-app
+        tier: app
     spec:
       containers:
       - name: rails-container

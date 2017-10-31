@@ -2,9 +2,13 @@ apiVersion: v1
 kind: Service
 metadata:
   name: rails-service
+  labels:
+    app: vanilla-rails-app
+    tier: app
 spec:
   selector:
     app: vanilla-rails-app
+    tier: app
   # type: NodePort
   type: LoadBalancer
   ports:
