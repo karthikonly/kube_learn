@@ -19,3 +19,6 @@ spec:
         image: karthikonly/vanilla-rails:latest
         ports:
         - containerPort: 3000
+        env:
+        - name: REDIS_URL
+          value: 'redis://redis-service:6379/0'
