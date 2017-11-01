@@ -2,7 +2,7 @@
 FROM ruby:2.2.3-slim
 
 # Install essential Linux packages
-RUN apt-get update -qq && apt-get install -y build-essential libsqlite3-dev nodejs
+RUN apt-get update -qq && apt-get install -y build-essential libsqlite3-dev nodejs libpq-dev
 
 # Define where our application will live inside the image
 ENV RAILS_ROOT /var/www/docker_example
